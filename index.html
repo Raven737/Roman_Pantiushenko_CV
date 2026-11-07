@@ -1,163 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
-        />
-        <title>Roman_Pantiushenko_CV</title>
-        <style>
-            @media (max-width: 360px) {
-                .myHrefs {
-                    font-size: 13px !important;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <div
-            class="container-fluid d-flex flex-column p-0 vh-100"
-            style="max-width: 800px"
-        >
-            <header
-                class="text-bg-primary p-3 pt-4 pb-4 d-flex align-items-center justify-content-between"
-            >
-                <div>
-                    <h1>Roman Pantiushenko</h1>
-                    <h5>Front-end Developer</h5>
-                </div>
-                <img
-                    src="./images/my_foto.png"
-                    class="rounded-circle"
-                    style="width: 100px"
-                    alt="Roman Pantiushenko"
-                />
-            </header>
-            <main class="d-md-flex flex-grow-1">
-                <div class="text-bg-warning p-3">
-                    <h6>Personal info</h6>
-                    <ul class="list-unstyled">
-                        <li>
-                            <i class="bi bi-geo-alt-fill"></i>
-                            &nbsp;&nbsp;Kyiv, remote
-                        </li>
-                        <li>
-                            <i class="bi bi-telephone-fill"></i>
-                            &nbsp;&nbsp;+38 (093) 849-88-55
-                        </li>
-                        <li>
-                            <i class="bi bi-envelope-fill"></i>
-                            &nbsp;&nbsp;prvm79@ukr.net
-                        </li>
-                        <li>
-                            <i class="bi bi-github"></i>&nbsp;&nbsp;
-                            <a
-                                href="https://github.com/Raven737"
-                                target="_blank"
-                                style="font-size: 14px"
-                                class="myHrefs"
-                            >
-                                https://github.com/Raven737
-                            </a>
-                        </li>
-                        <li>
-                            <div class="d-flex">
-                                <i class="bi bi-linkedin"></i>
-                                &nbsp;&nbsp;&nbsp;
-                                <a
-                                    href="https://www.linkedin.com/in/roman-pantiushenko-570184204/"
-                                    target="_blank"
-                                    style="font-size: 14px"
-                                    class="myHrefs"
-                                >
-                                    https://www.linkedin.com/in/roman-pantiushenko-570184204/
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="d-flex align-items-center">
-                                <img
-                                    src="./images/codewars.png"
-                                    width="16"
-                                    height="16"
-                                    alt="codewars"
-                                />
-                                &nbsp;&nbsp;&nbsp;
-                                <a
-                                    href="https://www.codewars.com/users/Raven737"
-                                    target="_blank"
-                                    style="font-size: 14px"
-                                    class="myHrefs"
-                                >
-                                    https://www.codewars.com/users/Raven737
-                                </a>
-                            </div>
-                        </li>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roman Pantiushenko · Angular Developer CV</title>
+    <meta name="description" content="Roman Pantiushenko, Frontend Developer (Angular, TypeScript, Electron). Kyiv, Ukraine. Open to freelance and remote work." />
+    <link rel="icon" href="https://github.com/Raven737.png?size=64" />
+    <style>
+        :root {
+            --text: #1f2933;
+            --muted: #5f6b7a;
+            --accent: #c3002f;
+            --line: #e3e7ec;
+            --side: #f5f7fa;
+            --chip: #ffffff;
+            --bg: #eef1f5;
+            --paper: #ffffff;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font: 15px/1.55 "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .page {
+            max-width: 960px;
+            margin: 32px auto;
+            background: var(--paper);
+            box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 32px 40px;
+            border-bottom: 4px solid var(--accent);
+        }
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        h1 { margin: 0; font-size: 32px; line-height: 1.2; }
+        .role { margin: 4px 0 8px; font-size: 18px; color: var(--accent); font-weight: 600; }
+        .tagline { margin: 0; color: var(--muted); }
+        .layout { display: grid; grid-template-columns: 300px 1fr; }
+        aside { background: var(--side); padding: 28px 28px 32px; border-right: 1px solid var(--line); }
+        main { padding: 28px 40px 36px; }
+        h2 {
+            margin: 0 0 12px;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+        section + section { margin-top: 28px; }
+        ul.plain { list-style: none; padding: 0; margin: 0; }
+        ul.plain li { margin-bottom: 6px; word-break: break-word; }
+        .label { display: block; font-size: 12px; color: var(--muted); }
+        .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+        .chip {
+            background: var(--chip);
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 2px 8px;
+            font-size: 13px;
+        }
+        .chip.strong { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+        .group + .group { margin-top: 12px; }
+        .group-title { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+        .job-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; }
+        .job-title { font-weight: 700; font-size: 16px; }
+        .job-meta { color: var(--muted); font-size: 14px; }
+        .job-org { color: var(--muted); margin-bottom: 8px; }
+        main ul { margin: 0; padding-left: 18px; }
+        main ul li { margin-bottom: 4px; }
+        .project { border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+        .project-title { font-weight: 700; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+        th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+        th { color: var(--muted); font-weight: 600; }
+        .good { color: #0a7a3d; font-weight: 600; }
+        .print-btn {
+            display: block;
+            margin: 0 auto 32px;
+            padding: 8px 18px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--paper);
+            color: var(--text);
+            font: inherit;
+            cursor: pointer;
+        }
+        @media (max-width: 760px) {
+            .page { margin: 0; border-radius: 0; }
+            header { flex-direction: column; text-align: center; padding: 28px 16px; }
+            .layout { grid-template-columns: 1fr; }
+            aside { border-right: none; border-bottom: 1px solid var(--line); padding: 24px 16px; }
+            main { padding: 24px 16px 32px; }
+        }
+        @media print {
+            @page { size: A4; margin: 10mm; }
+            body { background: #fff; font-size: 12.5px; }
+            .page { margin: 0; box-shadow: none; border-radius: 0; max-width: none; }
+            .print-btn { display: none; }
+            a { color: var(--text); }
+            section { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <img src="https://github.com/Raven737.png?size=240" alt="Roman Pantiushenko" />
+            <div>
+                <h1>Roman Pantiushenko</h1>
+                <p class="role">Frontend Developer · Angular, TypeScript, Electron</p>
+                <p class="tagline">I find and fix the root cause of bugs, keep changes small and clean, and make Angular apps fast.</p>
+            </div>
+        </header>
+
+        <div class="layout">
+            <aside>
+                <section>
+                    <h2>Contacts</h2>
+                    <ul class="plain">
+                        <li><span class="label">Location</span>Kyiv, Ukraine · remote work</li>
+                        <li><span class="label">Email</span><a href="mailto:prvm79@gmail.com">prvm79@gmail.com</a></li>
+                        <li><span class="label">Phone</span><a href="tel:+380938498855">+38 (093) 849-88-55</a></li>
+                        <li><span class="label">GitHub</span><a href="https://github.com/Raven737" target="_blank" rel="noopener">github.com/Raven737</a></li>
+                        <li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/roman-pantiushenko-570184204/" target="_blank" rel="noopener">roman-pantiushenko</a></li>
+                        <li><span class="label">Fiverr</span><a href="https://www.fiverr.com/roman_dev777" target="_blank" rel="noopener">roman_dev777</a></li>
+                        <li><span class="label">Codewars</span><a href="https://www.codewars.com/users/Raven737" target="_blank" rel="noopener">Raven737</a></li>
                     </ul>
-                    <h6 class="mt-3">My skills</h6>
-                    <span class="badge text-bg-light">JavaScript</span>
-                    <span class="badge text-bg-light">TypeScript</span>
-                    <span class="badge text-bg-light">Angular</span>
-                    <span class="badge text-bg-light">React</span>
-                    <span class="badge text-bg-light">HTML</span>
-                    <span class="badge text-bg-light">CSS</span>
-                    <span class="badge text-bg-light">SCSS</span>
-                    <span class="badge text-bg-light">Bootstrap</span>
-                    <span class="badge text-bg-light">Tailwind CSS</span>
-                    <span class="badge text-bg-light">Git</span>
-                    <span class="badge text-bg-light">Gulp</span>
-                    <span class="badge text-bg-light">npm</span>
-                    <span class="badge text-bg-light">GIMP</span>
-                    <span class="badge text-bg-light">Figma</span>
-                    <h6 class="mt-3">English</h6>
-                    <ul class="list-unstyled">
-                        <li>
-                            <img
-                                src="./images/english.png"
-                                width="16"
-                                height="16"
-                                alt="English"
-                            />
-                            &nbsp;
-                            <a
-                                href="https://www.linkedin.com/feed/update/urn:li:activity:7053058059899666432/"
-                                target="_blank"
-                            >
-                                Upper-Intermediate
-                            </a>
-                        </li>
+                </section>
+
+                <section>
+                    <h2>Skills</h2>
+                    <div class="group">
+                        <div class="group-title">Core</div>
+                        <div class="chips">
+                            <span class="chip strong">Angular</span>
+                            <span class="chip strong">TypeScript</span>
+                            <span class="chip strong">Bug fixing</span>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="group-title">Frontend</div>
+                        <div class="chips">
+                            <span class="chip">Signals</span>
+                            <span class="chip">RxJS</span>
+                            <span class="chip">Reactive Forms</span>
+                            <span class="chip">Angular Material</span>
+                            <span class="chip">JavaScript</span>
+                            <span class="chip">HTML5</span>
+                            <span class="chip">CSS3 / SCSS</span>
+                            <span class="chip">Responsive design</span>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="group-title">Desktop and data</div>
+                        <div class="chips">
+                            <span class="chip">Electron</span>
+                            <span class="chip">SQLite</span>
+                            <span class="chip">SQL</span>
+                            <span class="chip">TypeORM</span>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="group-title">Quality and tools</div>
+                        <div class="chips">
+                            <span class="chip">Jest</span>
+                            <span class="chip">ESLint</span>
+                            <span class="chip">Git</span>
+                            <span class="chip">npm</span>
+                            <span class="chip">Figma</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Languages</h2>
+                    <ul class="plain">
+                        <li>Ukrainian · native</li>
+                        <li>English · <a href="https://www.linkedin.com/feed/update/urn:li:activity:7053058059899666432/" target="_blank" rel="noopener">Upper-Intermediate</a></li>
                     </ul>
-                </div>
-                <div class="text-bg-secondary p-3">
-                    <h6>About me</h6>
-                    <p>
-                        &emsp;I am currently working on a real-world project
-                        using JavaScript and Angular as part of a development
-                        team. My focus is on deepening my front-end skills
-                        through hands-on experience, continuous learning, and
-                        collaboration. It’s a great opportunity to sharpen my
-                        technical skills while growing as a reliable team
-                        player.
+                </section>
+            </aside>
+
+            <main>
+                <section>
+                    <h2>About me</h2>
+                    <p style="margin: 0">
+                        Frontend developer specializing in Angular and TypeScript. I work on a large
+                        Angular 19 + Electron desktop application with strict TypeScript, Signals, RxJS,
+                        TypeORM + SQLite and Jest. I am comfortable in existing codebases: I find the real
+                        cause of a problem, fix it with minimal, scoped changes and follow the project's code style.
+                        Open to freelance tasks and remote contracts.
                     </p>
+                </section>
+
+                <section>
+                    <h2>Experience</h2>
+                    <div class="job-head">
+                        <span class="job-title">Frontend Developer</span>
+                        <span class="job-meta">Since July 2024 · full-time</span>
+                    </div>
+                    <div class="job-org">Central Research Institute of the Armed Forces of Ukraine</div>
                     <ul>
-                        <li>
-                            2021 - Front-end React JS Web Development Course.
-                        </li>
-                        <li>2020 - 2021 - Taking part in learning projects.</li>
-                        <li>
-                            2024 - present - Working on a real-world Angular
-                            project as part of a development team.
-                        </li>
+                        <li>Develop a large-scale Angular 19 + Electron desktop application with offline-first local database storage.</li>
+                        <li>Build and refactor UI features with Angular Signals, RxJS and Reactive Forms.</li>
+                        <li>Implement Electron IPC handlers that connect the Angular frontend to a local SQLite database via TypeORM.</li>
+                        <li>Write SQL migrations and keep the database schema consistent.</li>
+                        <li>Align UI with the design system: Angular Material, SCSS, responsive layouts.</li>
+                        <li>Cover logic with Jest unit tests; work under strict ESLint rules (no <code>any</code>, no unsafe casts) with pre-commit checks.</li>
+                        <li>Work in a team of 10+ developers with code review and pull requests.</li>
                     </ul>
-                </div>
+                </section>
+
+                <section>
+                    <h2>Featured project</h2>
+                    <div class="project">
+                        <div class="project-title">
+                            Angular performance: before / after ·
+                            <a href="https://raven737.github.io/angular-performance-before-after/" target="_blank" rel="noopener">Live demo</a> ·
+                            <a href="https://github.com/Raven737/angular-performance-before-after" target="_blank" rel="noopener">Code</a>
+                        </div>
+                        <div>The same 10,000-row table built twice in Angular 22: slow and optimized with Signals, OnPush and CDK Virtual Scroll.</div>
+                        <table>
+                            <tr><th>Metric</th><th>Before</th><th>After</th></tr>
+                            <tr><td>Scrolling</td><td>1 FPS</td><td class="good">60 FPS</td></tr>
+                            <tr><td>Sorting a column</td><td>2,649 ms</td><td class="good">68 ms</td></tr>
+                            <tr><td>DOM elements in the table</td><td>130,000</td><td class="good">223</td></tr>
+                        </table>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Education and research</h2>
+                    <div class="job-title">PhD student in Computer Science</div>
+                    <div class="job-org">Institute of Software Systems of the National Academy of Sciences of Ukraine</div>
+                    <p style="margin: 0">
+                        Research: how ontologies help small offline language models create correct formal documents
+                        when computing resources are limited.
+                        <a href="https://orcid.org/0000-0002-9301-9389" target="_blank" rel="noopener">ORCID 0000-0002-9301-9389</a>
+                    </p>
+                </section>
             </main>
         </div>
-    </body>
+    </div>
+    <button class="print-btn" onclick="window.print()">Save as PDF / Print</button>
+</body>
 </html>
