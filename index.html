@@ -108,8 +108,21 @@
         }
         @media print {
             @page { size: A4; margin: 10mm; }
-            body { background: #fff; font-size: 12.5px; }
+            body { background: #fff; font-size: 11px; line-height: 1.45; }
             .page { margin: 0; box-shadow: none; border-radius: 0; max-width: none; }
+            header { padding: 12px 20px; gap: 18px; }
+            header img { width: 84px; height: 84px; }
+            h1 { font-size: 24px; }
+            .role { font-size: 14px; }
+            .layout { grid-template-columns: 230px 1fr; }
+            aside { padding: 14px 16px; }
+            main { padding: 14px 20px; }
+            section + section { margin-top: 14px; }
+            h2 { margin-bottom: 6px; }
+            .chip { font-size: 10.5px; padding: 1px 6px; }
+            .job-title { font-size: 13px; }
+            th, td { padding: 3px 6px; }
+            .project { padding: 8px 10px; }
             .print-btn { display: none; }
             a { color: var(--text); }
             section { break-inside: avoid; }
